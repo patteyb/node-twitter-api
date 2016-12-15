@@ -1,0 +1,21 @@
+{
+  "name": "node-twitter-api",
+  "version": "1.0.0",
+  "description": "A twitter interface",
+  "main": "app.js",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "moment": "^2.17.1",
+    "promise": "^7.1.1",
+    "twitter": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pattey Bleecker",
+  "license": "MIT"
+}

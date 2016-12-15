@@ -1,0 +1,34 @@
+extends ./layout.jade
+
+block content
+  include ./partials/_header.jade
+  .app--tweet
+    form(method='post', action='/')
+        .circle--fluid
+          .circle--fluid--cell.circle--fluid--primary.align-bottom.app--tweet--post
+            .app--avatar(style='background-image: url(#{tweets[0].user.profile_image_url})')
+            |          
+            textarea#tweet-textarea.circle--textarea--input(name="tweet" maxlength="140" placeholder="What's happening?")
+            |           
+            strong#tweet-char.app--tweet--char 140
+          |         
+          .circle--fluid--cell.align-bottom
+            button.button-primary Tweet
+  .bounds.app--body
+    .app--section--header
+        .grid-33
+          .app--section--heading
+            h2 Timeline
+        |         
+        .grid-33
+          .app--section--heading
+            strong #{tweets[0].user.friends_count}
+            |             
+            h2 Following
+        |         
+        .grid-33
+          .app--section--heading
+            h2 Direct Messages
+    include ./partials/_timeline.jade
+    include ./partials/_friends.jade
+    include ./partials/_messages.jade

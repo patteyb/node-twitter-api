@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    include ./partials/_head.jade
+    
+    body#page--error
+        #error.app--error
+            h1 So sorry! 
+            h2(style='orange;') #{message}
+            img(src='/static/images/teatime.png')
+        #message.app--error--message
+            p.app--error--message Perhaps it's tea-time. Please try again later.
+
+
+        script(src='/static/js/jquery.js')
+        script(src='/static/js/bootstrap.min.js')

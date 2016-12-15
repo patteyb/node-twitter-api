@@ -1,0 +1,19 @@
+.grid-33
+    .app--section
+        ul.app--message--list
+            for message in messages
+                li
+                    h3
+                    if (message.sender.name!==tweets[0].user.name)
+                        | Conversation with
+                    if (message.sender.name!==tweets[0].user.name)
+                        |  #{message.sender.name}
+
+                    ul.app--message--conversation
+
+                        li.app--message(class=(message.sender.name===tweets[0].user.name) ? "app--message--me" : "app--message")
+                            .app--avatar(style='background-image: url(#{message.sender.profile_image_url})') 
+                            |                 
+                            p.app--message--text #{message.text}
+                            |                 
+                            p.app--message--timestamp #{message.created_at}
