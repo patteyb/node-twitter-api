@@ -21,6 +21,8 @@
  *    		name: "your screen name",
  *    		url: 'https:/**twitter.com/'
  *		};
+ *
+ * 		module.exports = accessKeys;
  */
 'use strict';
 
@@ -34,15 +36,15 @@ var moment 		= require('moment');
 var app			= express();
 
 /** Variables used to store retrieved data */
-var tweets		= {};
-var friends		= {};
-var messagesRcvd= [];
-var messagesSent= [];
-var messages 	= [];
+var tweets		 = {};
+var friends		 = {};
+var messagesRcvd = [];
+var messagesSent = [];
+var messages 	 = [];
 /** Other variables */
-var count 		= 5;
+var count 		 = 5;
 var page;
-var errorMsg	= '';
+var errorMsg	 = '';
 
 /** Variables required for logging onto twitter account */
 var client = new twitter({
