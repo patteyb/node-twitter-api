@@ -18,8 +18,7 @@
  *    		accessToken :  'your access token',
  *    		accessSecret:  'your access secret',
  *    		screen_name: 'your screen name without the @',
- *    		name: "your screen name",
- *    		url: 'https:/**twitter.com/'
+ *    		url: 'https://twitter.com/'
  *		};
  *
  * 		module.exports = accessKeys;
